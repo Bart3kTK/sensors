@@ -1,5 +1,5 @@
-#ifndef PWRINSPACE_NOW_H
-#define PWRINSPACE_NOW_H
+#ifndef PWRINSPACE_SENSORS_NOW_H
+#define PWRINSPACE_SENSORS_NOW_H
 
 #include <stdbool.h>
 #include <stdint.h>
@@ -16,7 +16,7 @@
 #include "now_structs.h"
 
 extern const uint8_t adress_obc[];
-extern QueueHandle_t obc_now_rx_queue;
+extern QueueHandle_t sensors_now_queue;
 
 // Init:
 bool nowInit();

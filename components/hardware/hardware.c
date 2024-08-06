@@ -1,8 +1,10 @@
 #include <stdbool.h>
 #include <stdint.h>
-#include "app.h"
+#include "hardware.h"
 #include "sensors/max31856.h"
 #include "sensors/pressure_sensor.h"
+#include "utils/spi.h"
+
 // #define TEMPERATURA jest_pijana_no_i_buja_sie_po_klubach
 
 static const char *TAG = "TANWA_SENSORS_HARDWARE";
