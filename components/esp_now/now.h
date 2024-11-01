@@ -13,7 +13,7 @@
 #include "esp_now.h"
 #include "esp_crc.h"
 
-#include "now_structs.h"
+#include "now.h"
 
 extern const uint8_t adress_obc[];
 extern QueueHandle_t sensors_now_queue;

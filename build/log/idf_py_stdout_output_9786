@@ -1,0 +1,44 @@
+-- IDF_TARGET is not set, guessed 'esp32' from sdkconfig '/home/bartek/sensors/sdkconfig'
+-- Found Git: /usr/bin/git (found version "2.34.1") 
+-- The C compiler identification is GNU 12.2.0
+-- The CXX compiler identification is GNU 12.2.0
+-- The ASM compiler identification is GNU
+-- Found assembler: /home/bartek/.espressif/tools/xtensa-esp32-elf/esp-12.2.0_20230208/xtensa-esp32-elf/bin/xtensa-esp32-elf-gcc
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /home/bartek/.espressif/tools/xtensa-esp32-elf/esp-12.2.0_20230208/xtensa-esp32-elf/bin/xtensa-esp32-elf-gcc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /home/bartek/.espressif/tools/xtensa-esp32-elf/esp-12.2.0_20230208/xtensa-esp32-elf/bin/xtensa-esp32-elf-g++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Building ESP-IDF components for target esp32
+-- Project sdkconfig file /home/bartek/sensors/sdkconfig
+-- Looking for sys/types.h
+-- Looking for sys/types.h - found
+-- Looking for stdint.h
+-- Looking for stdint.h - found
+-- Looking for stddef.h
+-- Looking for stddef.h - found
+-- Check size of time_t
+-- Check size of time_t - done
+-- Found Python3: /home/bartek/.espressif/python_env/idf5.1_py3.10_env/bin/python (found version "3.10.12") found components: Interpreter 
+-- Performing Test C_COMPILER_SUPPORTS_WFORMAT_SIGNEDNESS
+-- Performing Test C_COMPILER_SUPPORTS_WFORMAT_SIGNEDNESS - Success
+-- App "sensors" version: a02f5d4-dirty
+-- Adding linker script /home/bartek/sensors/build/esp-idf/esp_system/ld/memory.ld
+-- Adding linker script /home/bartek/esp-idf/components/esp_system/ld/esp32/sections.ld.in
+-- Adding linker script /home/bartek/esp-idf/components/esp_rom/esp32/ld/esp32.rom.ld
+-- Adding linker script /home/bartek/esp-idf/components/esp_rom/esp32/ld/esp32.rom.api.ld
+-- Adding linker script /home/bartek/esp-idf/components/esp_rom/esp32/ld/esp32.rom.libgcc.ld
+-- Adding linker script /home/bartek/esp-idf/components/esp_rom/esp32/ld/esp32.rom.newlib-data.ld
+-- Adding linker script /home/bartek/esp-idf/components/esp_rom/esp32/ld/esp32.rom.syscalls.ld
+-- Adding linker script /home/bartek/esp-idf/components/esp_rom/esp32/ld/esp32.rom.newlib-funcs.ld
+-- Adding linker script /home/bartek/esp-idf/components/soc/esp32/ld/esp32.peripherals.ld
+-- Components: app app_trace app_update bootloader bootloader_support bt cmock config console cxx data driver efuse esp-tls esp_adc esp_app_format esp_coex esp_common esp_eth esp_event esp_gdbstub esp_hid esp_http_client esp_http_server esp_https_ota esp_https_server esp_hw_support esp_lcd esp_local_ctrl esp_mm esp_netif esp_netif_stack esp_now esp_partition esp_phy esp_pm esp_psram esp_ringbuf esp_rom esp_system esp_timer esp_wifi espcoredump esptool_py fatfs freertos hal hardware heap http_parser idf_test ieee802154 json log lwip main mbedtls mqtt newlib nvs_flash openthread partition_table perfmon protobuf-c protocomm pthread sdmmc sensors soc spi_flash spiffs tcp_transport ulp unity usb utils vfs wear_levelling wifi_provisioning wpa_supplicant xtensa
+-- Component paths: /home/bartek/sensors/components/app /home/bartek/esp-idf/components/app_trace /home/bartek/esp-idf/components/app_update /home/bartek/esp-idf/components/bootloader /home/bartek/esp-idf/components/bootloader_support /home/bartek/esp-idf/components/bt /home/bartek/esp-idf/components/cmock /home/bartek/sensors/components/config /home/bartek/esp-idf/components/console /home/bartek/esp-idf/components/cxx /home/bartek/sensors/components/data /home/bartek/esp-idf/components/driver /home/bartek/esp-idf/components/efuse /home/bartek/esp-idf/components/esp-tls /home/bartek/esp-idf/components/esp_adc /home/bartek/esp-idf/components/esp_app_format /home/bartek/esp-idf/components/esp_coex /home/bartek/esp-idf/components/esp_common /home/bartek/esp-idf/components/esp_eth /home/bartek/esp-idf/components/esp_event /home/bartek/esp-idf/components/esp_gdbstub /home/bartek/esp-idf/components/esp_hid /home/bartek/esp-idf/components/esp_http_client /home/bartek/esp-idf/components/esp_http_server /home/bartek/esp-idf/components/esp_https_ota /home/bartek/esp-idf/components/esp_https_server /home/bartek/esp-idf/components/esp_hw_support /home/bartek/esp-idf/components/esp_lcd /home/bartek/esp-idf/components/esp_local_ctrl /home/bartek/esp-idf/components/esp_mm /home/bartek/esp-idf/components/esp_netif /home/bartek/esp-idf/components/esp_netif_stack /home/bartek/sensors/components/esp_now /home/bartek/esp-idf/components/esp_partition /home/bartek/esp-idf/components/esp_phy /home/bartek/esp-idf/components/esp_pm /home/bartek/esp-idf/components/esp_psram /home/bartek/esp-idf/components/esp_ringbuf /home/bartek/esp-idf/components/esp_rom /home/bartek/esp-idf/components/esp_system /home/bartek/esp-idf/components/esp_timer /home/bartek/esp-idf/components/esp_wifi /home/bartek/esp-idf/components/espcoredump /home/bartek/esp-idf/components/esptool_py /home/bartek/esp-idf/components/fatfs /home/bartek/esp-idf/components/freertos /home/bartek/esp-idf/components/hal /home/bartek/sensors/components/hardware /home/bartek/esp-idf/components/heap /home/bartek/esp-idf/components/http_parser /home/bartek/esp-idf/components/idf_test /home/bartek/esp-idf/components/ieee802154 /home/bartek/esp-idf/components/json /home/bartek/esp-idf/components/log /home/bartek/esp-idf/components/lwip /home/bartek/sensors/main /home/bartek/esp-idf/components/mbedtls /home/bartek/esp-idf/components/mqtt /home/bartek/esp-idf/components/newlib /home/bartek/esp-idf/components/nvs_flash /home/bartek/esp-idf/components/openthread /home/bartek/esp-idf/components/partition_table /home/bartek/esp-idf/components/perfmon /home/bartek/esp-idf/components/protobuf-c /home/bartek/esp-idf/components/protocomm /home/bartek/esp-idf/components/pthread /home/bartek/esp-idf/components/sdmmc /home/bartek/sensors/components/sensors /home/bartek/esp-idf/components/soc /home/bartek/esp-idf/components/spi_flash /home/bartek/esp-idf/components/spiffs /home/bartek/esp-idf/components/tcp_transport /home/bartek/esp-idf/components/ulp /home/bartek/esp-idf/components/unity /home/bartek/esp-idf/components/usb /home/bartek/sensors/components/utils /home/bartek/esp-idf/components/vfs /home/bartek/esp-idf/components/wear_levelling /home/bartek/esp-idf/components/wifi_provisioning /home/bartek/esp-idf/components/wpa_supplicant /home/bartek/esp-idf/components/xtensa
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/bartek/sensors/build

@@ -1,0 +1,13 @@
+# Target labels
+ bootloader
+# Source files and their labels
+/home/bartek/sensors/build/CMakeFiles/bootloader
+/home/bartek/sensors/build/CMakeFiles/bootloader.rule
+/home/bartek/sensors/build/CMakeFiles/bootloader-complete.rule
+/home/bartek/sensors/build/bootloader-prefix/src/bootloader-stamp/bootloader-build.rule
+/home/bartek/sensors/build/bootloader-prefix/src/bootloader-stamp/bootloader-configure.rule
+/home/bartek/sensors/build/bootloader-prefix/src/bootloader-stamp/bootloader-download.rule
+/home/bartek/sensors/build/bootloader-prefix/src/bootloader-stamp/bootloader-install.rule
+/home/bartek/sensors/build/bootloader-prefix/src/bootloader-stamp/bootloader-mkdir.rule
+/home/bartek/sensors/build/bootloader-prefix/src/bootloader-stamp/bootloader-patch.rule
+/home/bartek/sensors/build/bootloader-prefix/src/bootloader-stamp/bootloader-update.rule

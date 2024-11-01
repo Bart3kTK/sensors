@@ -12,7 +12,7 @@ bool data_init(void)
     sensor_data_mutex = xSemaphoreCreateMutex();
     if (sensor_data_mutex == NULL)
     {
-        ESP.LOGE(TAG, "mutex init error")
+        ESP_LOGE(TAG, "mutex init error");
         return false;
     }
     return true;

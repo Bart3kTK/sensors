@@ -1,30 +1,41 @@
 #include <stdbool.h>
 #include <stdint.h>
 #include "hardware.h"
-#include "sensors/max31856.h"
-#include "sensors/pressure_sensor.h"
-#include "utils/spi.h"
+
+
+#define TAG "TANWA_SENSORS_HARDWARE"
+
 
 // #define TEMPERATURA jest_pijana_no_i_buja_sie_po_klubach
 
-static const char *TAG = "TANWA_SENSORS_HARDWARE";
 static Hardware_Manager_t HardwareInstance;
 
-
-
 static bool adc_calibration_init() {
-    adc_cali_handle_t handle = NULL;
-    esp_err_t ret = ESP_FAIL;
-    bool calibrated = false;
+  adc_cali_handle_t handle = NULL;
+  esp_err_t ret = ESP_FAIL;
+  bool calibrated = false;
 
-    HardwareInstance.mADC_1_cali = handle;
+  if (!calibrated) {
+    ESP_LOGI(TAG, "calibration scheme version is %s", "Line Fitting");
+    adc_cali_line_fitting_config_t cali_config = {
+        .unit_id = ADC_UNIT_1,
+        .atten = ADC_ATTEN_PRESSURE,
+        .bitwidth = ADC_BITWIDTH_DEFAULT,
+    };
+    ret = adc_cali_create_scheme_line_fitting(&cali_config, &handle);
     if (ret == ESP_OK) {
-        ESP_LOGI(TAG, "Calibration Success");
-    } else if (ret == ESP_ERR_NOT_SUPPORTED || !calibrated) {
-        ESP_LOGW(TAG, "eFuse not burnt, skip software calibration");
-    } else {
-        ESP_LOGE(TAG, "Invalid arg or no memory");
+      calibrated = true;
     }
+  }
+
+  HardwareInstance.mADC_1_cali = handle;
+  if (ret == ESP_OK) {
+    ESP_LOGI(TAG, "Calibration Success");
+  } else if (ret == ESP_ERR_NOT_SUPPORTED || !calibrated) {
+    ESP_LOGW(TAG, "eFuse not burnt, skip software calibration");
+  } else {
+    ESP_LOGE(TAG, "Invalid arg or no memory");
+  }
 
   return calibrated;
 }
@@ -67,11 +78,11 @@ bool hardware_init()
     #else
         HardwareInstance.mPressure_1 = (Pressure_Sensor_t)PRESSURE_SENSOR_INIT(
         PRESSURE_ADC_CHANNEL, &HardwareInstance.mADC_1,
-        &HardwareInstance.mADC_1_cali, &HardwareInstance.mADC_1_cali_enabled);
+        &HardwareInstance.mADC_1_cali, HardwareInstance.mADC_1_cali_enabled);
 
         HardwareInstance.mPressure_2 = (Pressure_Sensor_t)PRESSURE_SENSOR_INIT(
         PRESSURE_ADC_CHANNEL, &HardwareInstance.mADC_1,
-        &HardwareInstance.mADC_1_cali, &HardwareInstance.mADC_1_cali_enabled);
+        &HardwareInstance.mADC_1_cali, HardwareInstance.mADC_1_cali_enabled);
         
         ESP_LOGI(TAG, "Pressure sensors initialization...");
         pressure_sensor_init(&HardwareInstance.mPressure_1);

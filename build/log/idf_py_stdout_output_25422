@@ -1,0 +1,66 @@
+[1/18] Linking C static library esp-idf/esp_now/libesp_now.a
+[2/18] Linking C static library esp-idf/spiffs/libspiffs.a
+[3/18] Linking C static library esp-idf/wifi_provisioning/libwifi_provisioning.a
+[4/18] Linking C static library esp-idf/data/libdata.a
+[5/18] Linking C static library esp-idf/utils/libutils.a
+[6/18] Performing build step for 'bootloader'
+[1/1] cd /home/bartek/sensors/build/bootloader/esp-idf/esptool_py && /home/bartek/.espressif/python_env/idf5.1_py3.10_env/bin/python /home/bartek/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 /home/bartek/sensors/build/bootloader/bootloader.bin
+Bootloader binary size 0x6810 bytes. 0x7f0 bytes (7%) free.
+[7/16] Linking C static library esp-idf/sensors/libsensors.a
+[8/16] Building C object esp-idf/hardware/CMakeFiles/__idf_hardware.dir/hardware.c.obj
+FAILED: esp-idf/hardware/CMakeFiles/__idf_hardware.dir/hardware.c.obj 
+/home/bartek/.espressif/tools/xtensa-esp32-elf/esp-12.2.0_20230208/xtensa-esp32-elf/bin/xtensa-esp32-elf-gcc -DESP_PLATFORM -DIDF_VER=\"v5.1.2\" -DSOC_MMU_PAGE_SIZE=CONFIG_MMU_PAGE_SIZE -D_GNU_SOURCE -D_POSIX_READER_WRITER_LOCKS -I/home/bartek/sensors/build/config -I/home/bartek/sensors/components/hardware -I/home/bartek/esp-idf/components/newlib/platform_include -I/home/bartek/esp-idf/components/freertos/FreeRTOS-Kernel/include -I/home/bartek/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include -I/home/bartek/esp-idf/components/freertos/esp_additions/include/freertos -I/home/bartek/esp-idf/components/freertos/esp_additions/include -I/home/bartek/esp-idf/components/freertos/esp_additions/arch/xtensa/include -I/home/bartek/esp-idf/components/esp_hw_support/include -I/home/bartek/esp-idf/components/esp_hw_support/include/soc -I/home/bartek/esp-idf/components/esp_hw_support/include/soc/esp32 -I/home/bartek/esp-idf/components/esp_hw_support/port/esp32/. -I/home/bartek/esp-idf/components/esp_hw_support/port/esp32/private_include -I/home/bartek/esp-idf/components/heap/include -I/home/bartek/esp-idf/components/log/include -I/home/bartek/esp-idf/components/soc/include -I/home/bartek/esp-idf/components/soc/esp32 -I/home/bartek/esp-idf/components/soc/esp32/include -I/home/bartek/esp-idf/components/hal/esp32/include -I/home/bartek/esp-idf/components/hal/include -I/home/bartek/esp-idf/components/hal/platform_port/include -I/home/bartek/esp-idf/components/esp_rom/include -I/home/bartek/esp-idf/components/esp_rom/include/esp32 -I/home/bartek/esp-idf/components/esp_rom/esp32 -I/home/bartek/esp-idf/components/esp_common/include -I/home/bartek/esp-idf/components/esp_system/include -I/home/bartek/esp-idf/components/esp_system/port/soc -I/home/bartek/esp-idf/components/esp_system/port/include/private -I/home/bartek/esp-idf/components/xtensa/include -I/home/bartek/esp-idf/components/xtensa/esp32/include -I/home/bartek/esp-idf/components/lwip/include -I/home/bartek/esp-idf/components/lwip/include/apps -I/home/bartek/esp-idf/components/lwip/include/apps/sntp -I/home/bartek/esp-idf/components/lwip/lwip/src/include -I/home/bartek/esp-idf/components/lwip/port/include -I/home/bartek/esp-idf/components/lwip/port/freertos/include -I/home/bartek/esp-idf/components/lwip/port/esp32xx/include -I/home/bartek/esp-idf/components/lwip/port/esp32xx/include/arch -I/home/bartek/esp-idf/components/driver/include -I/home/bartek/esp-idf/components/driver/deprecated -I/home/bartek/esp-idf/components/driver/analog_comparator/include -I/home/bartek/esp-idf/components/driver/dac/include -I/home/bartek/esp-idf/components/driver/gpio/include -I/home/bartek/esp-idf/components/driver/gptimer/include -I/home/bartek/esp-idf/components/driver/i2c/include -I/home/bartek/esp-idf/components/driver/i2s/include -I/home/bartek/esp-idf/components/driver/ledc/include -I/home/bartek/esp-idf/components/driver/mcpwm/include -I/home/bartek/esp-idf/components/driver/parlio/include -I/home/bartek/esp-idf/components/driver/pcnt/include -I/home/bartek/esp-idf/components/driver/rmt/include -I/home/bartek/esp-idf/components/driver/sdio_slave/include -I/home/bartek/esp-idf/components/driver/sdmmc/include -I/home/bartek/esp-idf/components/driver/sigma_delta/include -I/home/bartek/esp-idf/components/driver/spi/include -I/home/bartek/esp-idf/components/driver/temperature_sensor/include -I/home/bartek/esp-idf/components/driver/touch_sensor/include -I/home/bartek/esp-idf/components/driver/twai/include -I/home/bartek/esp-idf/components/driver/uart/include -I/home/bartek/esp-idf/components/driver/usb_serial_jtag/include -I/home/bartek/esp-idf/components/driver/touch_sensor/esp32/include -I/home/bartek/esp-idf/components/esp_pm/include -I/home/bartek/esp-idf/components/esp_ringbuf/include -I/home/bartek/esp-idf/components/esp_adc/include -I/home/bartek/esp-idf/components/esp_adc/interface -I/home/bartek/esp-idf/components/esp_adc/esp32/include -I/home/bartek/esp-idf/components/esp_adc/deprecated/include -I/home/bartek/sensors/components/sensors -I/home/bartek/sensors/components/utils -I/home/bartek/esp-idf/components/esp_timer/include -I/home/bartek/sensors/components/data -I/home/bartek/sensors/components/esp_now -I/home/bartek/esp-idf/components/esp_wifi/include -I/home/bartek/esp-idf/components/esp_wifi/wifi_apps/include -I/home/bartek/esp-idf/components/esp_event/include -I/home/bartek/esp-idf/components/esp_phy/include -I/home/bartek/esp-idf/components/esp_phy/esp32/include -I/home/bartek/esp-idf/components/esp_netif/include -I/home/bartek/esp-idf/components/nvs_flash/include -I/home/bartek/esp-idf/components/spi_flash/include -I/home/bartek/esp-idf/components/esp_partition/include -I/home/bartek/sensors/components/config -mlongcalls -Wno-frame-address  -ffunction-sections -fdata-sections -Wall -Werror=all -Wno-error=unused-function -Wno-error=unused-variable -Wno-error=unused-but-set-variable -Wno-error=deprecated-declarations -Wextra -Wno-unused-parameter -Wno-sign-compare -Wno-enum-conversion -gdwarf-4 -ggdb -Og -fmacro-prefix-map=/home/bartek/sensors=. -fmacro-prefix-map=/home/bartek/esp-idf=/IDF -fstrict-volatile-bitfields -fno-jump-tables -fno-tree-switch-conversion -DconfigENABLE_FREERTOS_DEBUG_OCDAWARE=1 -std=gnu17 -Wno-old-style-declaration -Wno-format -Werror -MD -MT esp-idf/hardware/CMakeFiles/__idf_hardware.dir/hardware.c.obj -MF esp-idf/hardware/CMakeFiles/__idf_hardware.dir/hardware.c.obj.d -o esp-idf/hardware/CMakeFiles/__idf_hardware.dir/hardware.c.obj -c /home/bartek/sensors/components/hardware/hardware.c
+/home/bartek/sensors/components/hardware/hardware.c: In function 'adc_calibration_init':
+/home/bartek/sensors/components/hardware/hardware.c:20:5: error: unknown type name 'adc_cali_curve_fitting_config_t'; did you mean 'adc_cali_line_fitting_config_t'?
+   20 |     adc_cali_curve_fitting_config_t cali_config = {
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |     adc_cali_line_fitting_config_t
+/home/bartek/sensors/components/hardware/hardware.c:21:9: error: field name not in record or union initializer
+   21 |         .unit_id = ADC_UNIT_1,
+      |         ^
+/home/bartek/sensors/components/hardware/hardware.c:21:9: note: (near initialization for 'cali_config')
+/home/bartek/sensors/components/hardware/hardware.c:22:9: error: field name not in record or union initializer
+   22 |         .atten = ADC_ATTEN_PRESSURE,
+      |         ^
+/home/bartek/sensors/components/hardware/hardware.c:22:9: note: (near initialization for 'cali_config')
+In file included from /home/bartek/sensors/components/hardware/hardware.h:6,
+                 from /home/bartek/sensors/components/hardware/hardware.c:3:
+/home/bartek/sensors/components/sensors/pressure_sensor.h:31:28: error: excess elements in scalar initializer [-Werror]
+   31 | #define ADC_ATTEN_PRESSURE ADC_ATTEN_DB_11
+      |                            ^~~~~~~~~~~~~~~
+/home/bartek/sensors/components/hardware/hardware.c:22:18: note: in expansion of macro 'ADC_ATTEN_PRESSURE'
+   22 |         .atten = ADC_ATTEN_PRESSURE,
+      |                  ^~~~~~~~~~~~~~~~~~
+/home/bartek/sensors/components/sensors/pressure_sensor.h:31:28: note: (near initialization for 'cali_config')
+   31 | #define ADC_ATTEN_PRESSURE ADC_ATTEN_DB_11
+      |                            ^~~~~~~~~~~~~~~
+/home/bartek/sensors/components/hardware/hardware.c:22:18: note: in expansion of macro 'ADC_ATTEN_PRESSURE'
+   22 |         .atten = ADC_ATTEN_PRESSURE,
+      |                  ^~~~~~~~~~~~~~~~~~
+/home/bartek/sensors/components/hardware/hardware.c:23:9: error: field name not in record or union initializer
+   23 |         .bitwidth = ADC_BITWIDTH_DEFAULT,
+      |         ^
+/home/bartek/sensors/components/hardware/hardware.c:23:9: note: (near initialization for 'cali_config')
+/home/bartek/sensors/components/hardware/hardware.c:23:21: error: excess elements in scalar initializer [-Werror]
+   23 |         .bitwidth = ADC_BITWIDTH_DEFAULT,
+      |                     ^~~~~~~~~~~~~~~~~~~~
+/home/bartek/sensors/components/hardware/hardware.c:23:21: note: (near initialization for 'cali_config')
+/home/bartek/sensors/components/hardware/hardware.c:25:11: error: implicit declaration of function 'adc_cali_create_scheme_curve_fitting'; did you mean 'adc_cali_create_scheme_line_fitting'? [-Werror=implicit-function-declaration]
+   25 |     ret = adc_cali_create_scheme_curve_fitting(&cali_config, &handle);
+      |           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |           adc_cali_create_scheme_line_fitting
+/home/bartek/sensors/components/hardware/hardware.c: In function 'hardware_init':
+/home/bartek/sensors/components/hardware/hardware.c:95:9: error: the comparison will always evaluate as 'true' for the address of 'mADC_1_cali_enabled' will never be NULL [-Werror=address]
+   95 |         HardwareInstance.mPressure_1 = (Pressure_Sensor_t)PRESSURE_SENSOR_INIT(
+      |         ^~~~~~~~~~~~~~~~
+/home/bartek/sensors/components/hardware/hardware.h:22:10: note: 'mADC_1_cali_enabled' declared here
+   22 |     bool mADC_1_cali_enabled;
+      |          ^~~~~~~~~~~~~~~~~~~
+/home/bartek/sensors/components/hardware/hardware.c:99:9: error: the comparison will always evaluate as 'true' for the address of 'mADC_1_cali_enabled' will never be NULL [-Werror=address]
+   99 |         HardwareInstance.mPressure_2 = (Pressure_Sensor_t)PRESSURE_SENSOR_INIT(
+      |         ^~~~~~~~~~~~~~~~
+/home/bartek/sensors/components/hardware/hardware.h:22:10: note: 'mADC_1_cali_enabled' declared here
+   22 |     bool mADC_1_cali_enabled;
+      |          ^~~~~~~~~~~~~~~~~~~
+cc1: all warnings being treated as errors
+ninja: build stopped: subcommand failed.
